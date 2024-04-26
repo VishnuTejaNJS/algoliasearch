@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins";
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    background: none;
+    background-color: #081B3B;
+    color: aliceblue;
+}
+.header nav {
+    background: #0082e6;
+    height: 80px;
+    width: 100%;
+}
+.header label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+.header nav ul{
+    float: right;
+    margin-right: 20px;
+}
+.header nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+    color: white;
+    font-size: 22px;
+    padding: 0 13px;
+    border-radius: 3px;
+}
+li.active:hover{
+    background: #1b9bff;
+    transition: 0.5s;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+.text{
+    display: flex;
+    justify-content: space-evenly;
+}
+.text .right{
+    justify-content: center;
+    text-align: center;
+    margin-top: 30vh;
+}
+.text .right h1{
+    font-size: 3.5rem;
+}
+.text .left img{
+    height: 100%;
+    width: 100%;
+    padding-left: 30px;
+} 
+.search{
+    height: 100vh;
+    width: 100vw;
+    /* width: 60vw; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.search h3{
+    font-size: 3rem;
+}
+.search input{
+    border: none;
+    border-bottom: 0.6px solid aliceblue;
+    padding: 1rem;
+    font-size: 1.1rem;
+    width: 60%;
+    border-radius: 30px;
+    outline: none;
+    margin-top: 4vh;
+    color: darkslateblue;
+}
+.results{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    margin: 1rem;
+    padding-left: 80px;
+    /* padding-top: 50px; */
+
+}
+.result{
+    background: white;
+    border: 0.2px solid darkcyan;
+    border-radius: 16px;
+    padding: 1rem;
+    margin: 1rem;
+    color: black;
+}
+img{
+    height: 100px;
+}
+.result:hover{
+    cursor: pointer;
+    transform: scale(1.07);
+}
+button{
+    background: darkcyan;
+    color: aliceblue;
+    font-weight: bold;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 12px;
+    margin: 0.6rem 0;
+}
+@media(max-width:952px){
+    .header nav.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    .header nav ul li{
+        font-size: 16px;
+    }
+    .search h3{
+        font-size: 1.8rem;
+        margin-top: 50vh;
+    }
+    .search input{
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+    .results{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    .result{
+        font-size: 0.7rem;
+    }
+    img{
+        height: 100px;
+    }
+    button{
+        font-size: 0.8rem;
+        padding: 0.6rem;
+    }
+}
+@media(max-width:858px){
+    body{
+        background: none;
+        background-color: #081B3B;
+    }
+    .header nav {
+        background: #081B3B;
+        height: 80px;
+        width: 100%;
+    }
+    .header label.logo{
+        padding: 20px;
+        padding-left: 50px;
+    }
+    .checkbtn{
+        display: block;
+        /* margin: 50px 0;
+        line-height: 30px; */
+    }
+    .header nav ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+    }
+    .header nav ul li{
+        display: inline;
+        font-size: 20px;
+
+    }
+    li.active:hover{
+        background: none;
+        color: #0082e6;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    .text{
+        display: flex;
+        flex-direction: column;
+    }
+    .text .left{
+        margin-top: 20vh;
+    }
+    .text .left img{
+        height: 130%;
+        width: 130%;
+        padding-right: 150px;
+        margin-top: 2.5px;
+    }
+    .text .right {
+        margin-top: 20px;
+    }
+    .text .right h1{
+        font-size: 2.5rem;
+    }
+    .search h3{
+        margin-top: 0.45vh;
+        font-size: 1.5rem;
+    }
+    .search input{
+        padding: 0.8rem;
+        width: 70%;
+        font-size: 0.9rem;
+        margin-top: 2vh;
+    }
+    .results{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        padding-left: 30px;
+    }
+    .result{
+        font-size: 0.7rem;
+    }
+    img{
+        height: 100px;
+    }
+    button{
+        font-size: 0.8rem;
+        padding: 0.6rem;
+    }
+    
+}
